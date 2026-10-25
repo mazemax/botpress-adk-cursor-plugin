@@ -20,6 +20,7 @@ import {
   type Host,
   type UpstreamManifest,
 } from './lib/common.js'
+import { verifyGeneratedCommands } from './generate-commands.js'
 
 const require = createRequire(import.meta.url)
 const Ajv2020 = require('ajv/dist/2020.js') as typeof Ajv2020Class
@@ -200,6 +201,7 @@ export function validateRepository(root: string): { files: number; skills: numbe
   verifyProvenance(root, upstream)
   validateManifest(root, distribution, packageJson.version)
   validateComponents(root, distribution.host, upstream)
+  verifyGeneratedCommands(root)
   validateWorkflowPins(root)
   validateDocuments(root, packageJson.version)
   listRepositoryFiles(root)

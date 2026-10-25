@@ -4,15 +4,15 @@ Start with `docs/compatibility.md`: an unverified host configuration is not a kn
 
 ## Plugin does not appear
 
-**Possible causes:** The manifest is not at the expected location, the host cached an older copy, the installation source is not the intended repository/tag, or the host surface does not support this package mode.
+**Possible causes:** Local plugin imports are not allowed, the manifest is not at the expected location, the host cached an older copy, the installation source is not the intended repository/tag, or an external symlink was skipped.
 
-**Action:** Confirm `.cursor-plugin/plugin.json` exists in the installed copy, reinstall/refresh from the intended source, restart or reload the host, and inspect the installed plugin list. Follow the host-specific steps in `docs/quickstart.md` and record the exact host version.
+**Action:** Confirm `.cursor-plugin/plugin.json` exists in a real directory under `~/.cursor/plugins/local/botpress-adk-community`, replace any unsupported external symlink with a copied directory, reload/restart, and inspect **Customize**. Follow `docs/quickstart.md` and record the exact Cursor version.
 
 ## Skills are missing or the wrong skill activates
 
 **Possible causes:** Duplicate personal/project/plugin skills with the same `name`, stale session state, an overly broad prompt, or a host discovery defect.
 
-**Action:** Inventory other installed copies, remove duplicates, start a fresh conversation, and use the activation issue template with the prompt, expected skill, actual skill, host/model/version, and package SHA. Do not include private transcripts.
+**Action:** Inventory other installed copies, remove duplicates through the owning interface, start a fresh conversation, and use the activation issue template with the prompt, expected skill, actual skill, host/model/version, and package SHA. Do not include private transcripts.
 
 ## A skill cannot find `references/*.md`
 
@@ -20,9 +20,11 @@ Start with `docs/compatibility.md`: an unverified host configuration is not a kn
 
 **Action:** Verify the installed tree contains the reference under the same skill directory. Run `npm run check:references` in the source repository. Reinstall using real directories, not an unsupported external symlink.
 
-## Commands are unavailable
+## Commands are unavailable or will not invoke
 
-Stage 1 ships skills only for Cursor. The 12 files under `upstream/commands/` are source evidence, not installed host commands. Command availability is a Stage 2 deliverable only for hosts included in the approved command-conversion scope; Codex remains skills-only.
+**Possible causes:** The copied payload predates Stage 2 or omits `commands/`, the window/session is stale, or the candidate `/adk-*` form differs from the host's actual invocation.
+
+**Action:** Verify all 12 generated Markdown files exist in the installed `commands/` directory, reload/restart, and open a fresh `/` picker. Select the displayed `adk-*` entry and record its exact label and successful typed form. In the source repository, run `npm run check:commands`; this proves generated content only, not host discovery. Record missing commands as a release-blocking host result even if a natural-language prompt works.
 
 ## ADK CLI is missing, outdated, or not authenticated
 

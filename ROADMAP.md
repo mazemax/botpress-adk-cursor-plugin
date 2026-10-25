@@ -15,9 +15,12 @@ The roadmap improves packaging and developer experience without adding a doctor 
 
 ## Stage 2 — Host-native developer experience
 
-- Complete and test the Cursor quickstart, workflow guide, troubleshooting, update, rollback, and uninstall paths.
-- Add only the host-specific packaging required by the approved plan.
-- Produce current screenshots and review materials from verified workflows.
+**Status:** In progress. Twelve generated commands and host-specific documentation are implemented locally; real-host discovery, invocation, and golden paths remain open.
+
+- Generate all 12 upstream commands into Cursor's auto-discovered `commands/` directory and enforce exact inventory/content drift checks.
+- Document the real copied-directory local-plugin flow, including the complete runtime payload and external-symlink limitation.
+- Provide command purposes, prerequisites, side effects, candidate `/adk-*` invocation guidance, and natural-language alternatives without claiming unrun host results.
+- Complete real-host workflows before capturing screenshots or presenting review materials as verified evidence.
 
 ## Stage 3 — Behavior, safety, and compatibility
 

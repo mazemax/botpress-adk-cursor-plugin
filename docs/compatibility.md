@@ -19,10 +19,10 @@ For every tested row, capture host/version, OS/architecture, distribution `1.0.0
 
 ## Current limitations
 
-- Six skills are present, but real-host discovery and activation are unverified.
-- Stage 1 does not ship converted host commands; the source command inventory is retained under `upstream/commands/`.
+- Six skills and 12 generated commands are present, but real-host discovery, picker labels, `/adk-*` invocation, and activation are unverified.
+- The copied-directory local-plugin flow is an official documented protocol, not an observed result for this package; Cursor CLI parity is not claimed.
 - No external Botpress developer beta has been completed.
-- No marketplace submission or approval has occurred.
+- No Cursor Marketplace submission, listing, or approval has occurred.
 - Actual ADK CLI prompts, generated files, network calls, and workspace effects remain live-verification items; see `docs/side-effects.md`.
 
 ## Known upstream reference issues

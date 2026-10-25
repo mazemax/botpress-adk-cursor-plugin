@@ -8,12 +8,14 @@ Release candidate: `1.0.0-rc.1`. Do not mark an item complete without linked, ob
 - [ ] `npm run sync:verify` confirms every managed file against `79abe10503bf6dc70486737c94159322e108e496` or a newly reviewed sync commit.
 - [ ] CI is green on the immutable tag/SHA; all GitHub Actions are pinned and tokens are least-privilege.
 - [ ] License, `NOTICE.md`, `UPSTREAM.json`, community status, and publisher metadata are correct.
-- [ ] Package inventory contains no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, or unexpected host components.
+- [ ] Package inventory contains no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, rules, or unexpected host components.
+- [ ] `npm run check:commands` confirms exactly 12 generated Cursor commands with no missing, extra, or manually edited files.
 - [ ] Reference and context reports were reviewed; no unexplained growth remains.
 
 ## Host and behavior gates
 
-- [ ] Clean Cursor installation and expected skill discovery pass on the declared support matrix.
+- [ ] Clean Cursor installation and expected six-skill and 12-command discovery pass on the declared support matrix.
+- [ ] Every command's actual picker label and explicit invocation are recorded; natural-language fallbacks are evaluated separately.
 - [ ] The documented golden path passes with synthetic data and no production deployment.
 - [ ] Direct, indirect, negative, overlap, and safety cases meet published thresholds.
 - [ ] Update, rollback, duplicate-install, and uninstall behavior pass with residue documented.
