@@ -1,6 +1,6 @@
 ---
 name: adk
-description: "Build and explain Botpress Agent Development Kit (ADK) projects, primitives, configuration, actions, tools, workflows, integrations, evals, and frontend architecture. For Dev Console pages, tabs, navigation, Agent Steps, traces, or other console UI questions, use adk-dev-console instead."
+description: "Build, explain, and modify Botpress Agent Development Kit (ADK) project source and configuration: actions, tools, workflows, conversations, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai."
 license: MIT
 ---
 

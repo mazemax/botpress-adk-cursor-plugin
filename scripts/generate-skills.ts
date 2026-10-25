@@ -14,7 +14,7 @@ export const CURSOR_SKILL_DIRECTORY = 'cursor/skills'
 // Distribution-owned discovery metadata only. Official instructions and references
 // remain in skills/ and are never edited by this generator.
 export const cursorRoutingDescriptions: Readonly<Record<string, string>> = {
-  adk: 'Build and explain Botpress Agent Development Kit (ADK) projects, primitives, configuration, actions, tools, workflows, integrations, evals, and frontend architecture. For Dev Console pages, tabs, navigation, Agent Steps, traces, or other console UI questions, use adk-dev-console instead.',
+  adk: 'Build, explain, and modify Botpress Agent Development Kit (ADK) project source and configuration: actions, tools, workflows, conversations, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai.',
   'adk-dev-console': 'Explain and navigate the ADK Dev Console UI. Use for questions about its pages, tabs, navigation, Agent Steps, traces, multi-agent dashboard, agent switching, console modes, or localhost:3001, including which tab shows Agent Steps for a running ADK bot.',
 }
 
