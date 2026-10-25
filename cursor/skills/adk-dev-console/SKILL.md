@@ -1,6 +1,6 @@
 ---
 name: adk-dev-console
-description: "Explain and navigate the ADK Dev Console UI. Use for questions about its pages, tabs, navigation, Agent Steps, traces, multi-agent dashboard, agent switching, console modes, or localhost:3001, including which tab shows Agent Steps for a running ADK bot."
+description: "Use when asked which Dev Console tab shows Agent Steps for a running ADK bot. Also use for ADK Dev Console pages, tabs, navigation, traces, multi-agent dashboard, agent switching, console modes, localhost:3001, and other console UI questions."
 license: MIT
 ---
 

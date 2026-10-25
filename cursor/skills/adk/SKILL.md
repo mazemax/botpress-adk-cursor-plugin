@@ -1,6 +1,6 @@
 ---
 name: adk
-description: "Build, explain, and modify Botpress Agent Development Kit (ADK) project source and configuration: actions, tools, workflows, conversations, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai."
+description: "Implement and explain Botpress ADK project source code and configuration only: actions, tools, workflows, conversations, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai. Do not use this skill for Dev Console or other user-interface navigation, Agent Steps, traces, or dashboard questions."
 license: MIT
 ---
 
