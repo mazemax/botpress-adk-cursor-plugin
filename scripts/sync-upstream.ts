@@ -13,9 +13,11 @@ import {
 } from 'node:fs'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { writeGeneratedSkills } from './generate-skills.js'
 import {
   isCommitSha,
   listFiles,
+  loadDistribution,
   loadUpstream,
   readJson,
   relativeFile,
@@ -215,6 +217,7 @@ export function applyUpstream(root: string, requestedCommit: string): UpstreamMa
     cpSync(path.join(temporary, 'skills.json'), path.join(root, 'upstream', 'skills.json'))
     cpSync(path.join(temporary, 'LICENSE'), path.join(root, 'LICENSE'))
     writeJson(path.join(root, 'UPSTREAM.json'), next)
+    if (loadDistribution(root).host === 'cursor') writeGeneratedSkills(root)
     const syncDirectory = path.join(root, '.sync')
     mkdirSync(syncDirectory, { recursive: true })
     writeFileSync(path.join(syncDirectory, 'summary.md'), [

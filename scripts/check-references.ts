@@ -79,7 +79,9 @@ function applyReferenceExceptions(root: string, foundIssues: ReferenceIssue[]): 
 }
 
 export function checkReferences(root: string): ReferenceResult {
-  const markdownFiles = listRepositoryFiles(root).filter((file) => file.endsWith('.md'))
+  // Generated Cursor skills are byte-checked against skills/ by generate-skills.ts.
+  // Check the managed originals here to avoid duplicate links and duplicate exceptions.
+  const markdownFiles = listRepositoryFiles(root).filter((file) => file.endsWith('.md') && !file.startsWith('cursor/skills/'))
   const foundIssues: ReferenceIssue[] = []
   let markdownLinks = 0
   let skillReferenceMentions = 0

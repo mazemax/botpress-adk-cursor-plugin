@@ -6,13 +6,13 @@
   "skills": [
     {
       "name": "adk",
-      "discoveryCharacters": 149,
-      "discoveryUtf8Bytes": 149,
-      "estimatedDiscoveryTokens": 38,
-      "skillMarkdownBytes": 20594,
+      "discoveryCharacters": 292,
+      "discoveryUtf8Bytes": 292,
+      "estimatedDiscoveryTokens": 73,
+      "skillMarkdownBytes": 20739,
       "referenceFiles": 31,
       "referenceUtf8Bytes": 540843,
-      "totalUtf8Bytes": 561437
+      "totalUtf8Bytes": 561582
     },
     {
       "name": "adk-debugger",
@@ -26,13 +26,13 @@
     },
     {
       "name": "adk-dev-console",
-      "discoveryCharacters": 218,
-      "discoveryUtf8Bytes": 220,
-      "estimatedDiscoveryTokens": 55,
-      "skillMarkdownBytes": 9280,
+      "discoveryCharacters": 269,
+      "discoveryUtf8Bytes": 269,
+      "estimatedDiscoveryTokens": 68,
+      "skillMarkdownBytes": 9331,
       "referenceFiles": 4,
       "referenceUtf8Bytes": 20193,
-      "totalUtf8Bytes": 29473
+      "totalUtf8Bytes": 29524
     },
     {
       "name": "adk-docs",
@@ -67,12 +67,12 @@
   ],
   "totals": {
     "skills": 6,
-    "discoveryCharacters": 1043,
-    "discoveryUtf8Bytes": 1047,
-    "estimatedDiscoveryTokens": 264,
-    "skillMarkdownUtf8Bytes": 68651,
+    "discoveryCharacters": 1237,
+    "discoveryUtf8Bytes": 1239,
+    "estimatedDiscoveryTokens": 312,
+    "skillMarkdownUtf8Bytes": 68847,
     "referenceFiles": 56,
     "referenceUtf8Bytes": 824418,
-    "packageSkillUtf8Bytes": 893069
+    "packageSkillUtf8Bytes": 893265
   }
 }

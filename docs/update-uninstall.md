@@ -10,7 +10,7 @@ For removal, close the relevant Cursor session, remove that local plugin directo
 
 ## Rollback
 
-Use a previously tested immutable tag/commit rather than an arbitrary branch tip. Replace the local payload with that revision using the verified host flow, restart/reload, and repeat skill/command discovery plus the golden path. A rollback must not silently change the upstream ADK snapshot: compare both `UPSTREAM.json` files and review generated-command and side-effect differences.
+Use a previously tested immutable tag/commit rather than an arbitrary branch tip. Replace the local payload, including `cursor/skills/`, with that revision using the verified host flow, restart/reload, and repeat skill/command discovery plus the golden path. A rollback must not silently change the upstream ADK snapshot: compare both `UPSTREAM.json` files and review generated-skill, generated-command, and side-effect differences.
 
 ## Duplicate installations
 

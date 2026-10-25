@@ -21,6 +21,7 @@ import {
   type UpstreamManifest,
 } from './lib/common.js'
 import { verifyGeneratedCommands } from './generate-commands.js'
+import { CURSOR_SKILL_DIRECTORY, verifyGeneratedSkills } from './generate-skills.js'
 
 const require = createRequire(import.meta.url)
 const Ajv2020 = require('ajv/dist/2020.js') as typeof Ajv2020Class
@@ -144,6 +145,14 @@ function validateComponents(root: string, host: Host, upstream: UpstreamManifest
   if (host === 'cursor') forbidden.push('rules')
   const present = forbidden.filter((target) => existsSync(relativeFile(root, target)))
   if (present.length) throw new Error(`Forbidden or out-of-scope components found: ${present.join(', ')}`)
+  if (host === 'cursor') {
+    const distribution = loadDistribution(root)
+    const manifest = readJson<Record<string, unknown>>(relativeFile(root, distribution.manifestPath))
+    if (manifest.skills !== `./${CURSOR_SKILL_DIRECTORY}`) {
+      throw new Error(`Cursor manifest skills must explicitly replace fallback discovery with ./${CURSOR_SKILL_DIRECTORY}`)
+    }
+    verifyGeneratedSkills(root)
+  }
 
   for (const skill of upstream.skillInventory) {
     const skillPath = path.join(root, 'skills', skill, 'SKILL.md')

@@ -16,8 +16,8 @@ npm run sync:verify
 
 ## Contribution boundaries
 
-- Keep `skills/` and `upstream/` byte-for-byte aligned with the recorded upstream snapshot.
-- Propose ADK content changes in [botpress/skills](https://github.com/botpress/skills), then bring them here through a reviewed sync.
+- Keep `skills/` and `upstream/` byte-for-byte aligned with the recorded upstream snapshot. Cursor loads the generated `cursor/skills/` overlay through its manifest; only its two declared routing descriptions may differ, while official bodies and references remain byte-identical.
+- Propose ADK instructional-content changes in [botpress/skills](https://github.com/botpress/skills), then bring them here through a reviewed sync. Distribution-owned Cursor discovery metadata is reviewed here and never changes upstream hashes.
 - Keep packaging specific to Cursor. Do not add MCP, agents, hooks, doctor, an Eval CI product, telemetry, or replacement ADK knowledge.
 - Do not run production deployment, mutate a real user workspace, or include secrets/private project content in tests.
 - Update documentation and tests with every packaging change.
@@ -25,13 +25,15 @@ npm run sync:verify
 
 ## Upstream syncs
 
-Use `npm run sync:check` to inspect the public upstream branch. The scheduled workflow can prepare a candidate branch and pull request, but it never auto-merges. Review the complete diff, side-effect changes, reference results, and context baseline before approving a sync.
+Use `npm run sync:check` to inspect the public upstream branch. The scheduled workflow can prepare a candidate branch and pull request, but it never auto-merges. Applying a reviewed Cursor sync regenerates `cursor/skills/`; review its routing-only diff, side-effect changes, reference results, and context baseline before approving a sync.
 
 ## Tests
 
 - `npm run generate:commands` — regenerate the 12 Cursor commands after a reviewed upstream command change; never edit generated files directly.
 - `npm run check:commands` — reject missing, extra, manually edited, or unsupported generated command content.
-- `npm run validate` — manifest, generated-command, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
+- `npm run generate:skills` — regenerate the Cursor skill directory after a reviewed sync or routing-metadata change; never edit generated files directly.
+- `npm run check:skills` — reject missing, extra, stale, or manually edited generated skills and any change to official bodies, references, or non-description frontmatter.
+- `npm run validate` — explicit manifest skill-path, generated-command/skill, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
 - `npm run check:references` — local Markdown and skill-reference reachability.
 - `npm run measure:context` — compare the reviewed context baseline.
 - `npm run check:behavior` — validate Stage 3 coverage, references, command cases, safety boundaries, compatibility states, and result metadata without invoking a model or host.

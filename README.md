@@ -19,7 +19,9 @@ Upstream `v2.0.7` at commit `79abe10503bf6dc70486737c94159322e108e496` provides 
 | `adk-evals` | Official ADK eval format, assertions, and live-dev testing guidance |
 | `adk-frontend` | Botpress frontend authentication, typed clients, action calls, and state patterns |
 
-The 12 official Claude Code commands remain under `upstream/commands/` as read-only sources. `npm run generate:commands` mechanically adapts them into Cursor's auto-discovered `commands/` directory with `name` and `description` frontmatter; drift checks reject missing, extra, or manually edited generated files. No agents, rules, hooks, MCP servers, or replacement ADK knowledge are added.
+The 12 official Claude Code commands remain under `upstream/commands/` as read-only sources. `npm run generate:commands` mechanically adapts them into Cursor's auto-discovered `commands/` directory with `name` and `description` frontmatter; drift checks reject missing, extra, or manually edited generated files.
+
+Cursor's manifest explicitly loads `cursor/skills/`, which replaces default `skills/` discovery. `npm run generate:skills` copies all six official skills there and overlays only the `adk` and `adk-dev-console` routing descriptions so Dev Console UI questions route to the specialized skill. Official bodies, references, other frontmatter, and the managed `skills/` tree remain unchanged; deterministic checks reject drift. No agents, rules, hooks, MCP servers, or replacement ADK knowledge are added.
 
 ## Install and first success
 
