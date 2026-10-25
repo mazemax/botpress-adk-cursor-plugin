@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "resultId": "YYYY-MM-DD-host-surface-short-package-sha",
+  "packageVersion": "1.0.0-rc.1",
+  "packageCommit": "REPLACE_WITH_FULL_40_CHARACTER_PACKAGE_COMMIT",
+  "upstreamVersion": "2.0.7",
+  "upstreamCommit": "79abe10503bf6dc70486737c94159322e108e496",
+  "host": "cursor",
+  "surfaceId": "cursor-ide-windows",
+  "surface": "Cursor IDE",
+  "hostVersion": "RECORD_EXACT_HOST_VERSION",
+  "os": {
+    "name": "RECORD_OS",
+    "version": "RECORD_OS_VERSION",
+    "architecture": "RECORD_ARCHITECTURE"
+  },
+  "model": "RECORD_EXACT_MODEL_IDENTIFIER",
+  "runAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "repetitions": 1,
+  "cases": [
+    {
+      "caseId": "adk-positive-explicit",
+      "status": "pass",
+      "repetitions": 1,
+      "expected": "Copy the expected behavior and assertions from the selected case.",
+      "observed": "Record actual routing, references, effects, and outcomes; never infer them from package contents.",
+      "evidence": "Add a sanitized excerpt or a relative path to sanitized evidence."
+    }
+  ],
+  "limitations": [
+    "Record scope, failures, untested operations, and any reason this environment cannot support a broader claim."
+  ]
+}

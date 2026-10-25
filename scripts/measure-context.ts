@@ -40,12 +40,12 @@ export interface ContextReport {
   }
 }
 
-export function measureSkills(root: string, skillNames: string[]): SkillMeasurement[] {
+export function measureSkills(root: string, skillNames: string[], skillRoot = 'skills'): SkillMeasurement[] {
   return [...skillNames].sort().map((name) => {
-    const skillDirectory = path.join(root, 'skills', name)
+    const skillDirectory = path.join(root, skillRoot, name)
     const skillPath = path.join(skillDirectory, 'SKILL.md')
     const skillBytes = readFileSync(skillPath)
-    const frontmatter = parseFrontmatter(skillBytes.toString('utf8'), `skills/${name}/SKILL.md`).values
+    const frontmatter = parseFrontmatter(skillBytes.toString('utf8'), `${skillRoot}/${name}/SKILL.md`).values
     const discovery = `${frontmatter.name ?? ''}\n${frontmatter.description ?? ''}`
     const referenceDirectory = path.join(skillDirectory, 'references')
     const references = listFiles(referenceDirectory).filter((file) => file.endsWith('.md'))
@@ -65,7 +65,14 @@ export function measureSkills(root: string, skillNames: string[]): SkillMeasurem
 }
 
 export function buildContextReport(root: string, upstream: UpstreamManifest): ContextReport {
-  const skills = measureSkills(root, upstream.skillInventory)
+  const distribution = readJson<{ host: string; manifestPath: string }>(path.join(root, 'distribution.json'))
+  let skillRoot = 'skills'
+  if (distribution.host === 'cursor') {
+    const manifest = readJson<{ skills?: unknown }>(relativeFile(root, distribution.manifestPath))
+    if (manifest.skills !== './cursor/skills') throw new Error('Cursor context measurement requires the reviewed explicit skill directory')
+    skillRoot = 'cursor/skills'
+  }
+  const skills = measureSkills(root, upstream.skillInventory, skillRoot)
   const sum = (select: (skill: SkillMeasurement) => number): number => skills.reduce((total, skill) => total + select(skill), 0)
   return {
     schemaVersion: 1,

@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "distributionVersion": "1.0.0-rc.1",
+  "upstreamVersion": "2.0.7",
+  "upstreamCommit": "79abe10503bf6dc70486737c94159322e108e496",
+  "supportStates": {
+    "tested": "Every operation has observed evidence at the recorded host, OS, model, and immutable package revision; failures remain visible.",
+    "expected-untested": "The surface is a documentation-based candidate only; no compatibility result is claimed.",
+    "not-claimed": "No support is claimed for this surface and no parity is inferred from another host surface."
+  },
+  "surfaces": [
+    {
+      "id": "cursor-ide-windows",
+      "host": "cursor",
+      "surface": "Cursor IDE",
+      "hostVersion": "unrecorded",
+      "os": "Windows",
+      "architecture": "unrecorded",
+      "model": "unrecorded",
+      "supportState": "expected-untested",
+      "rationale": "Official Cursor Plugin documentation describes this candidate surface; the host was unavailable during implementation.",
+      "operations": [
+        {
+          "operation": "install",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "discovery",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "activation",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "workflow",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "update",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "rollback",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "uninstall",
+          "status": "untested",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "cursor-ide-macos",
+      "host": "cursor",
+      "surface": "Cursor IDE",
+      "hostVersion": "unrecorded",
+      "os": "macOS",
+      "architecture": "unrecorded",
+      "model": "unrecorded",
+      "supportState": "expected-untested",
+      "rationale": "Official Cursor Plugin documentation describes this candidate surface; the host was unavailable during implementation.",
+      "operations": [
+        {
+          "operation": "install",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "discovery",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "activation",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "workflow",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "update",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "rollback",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "uninstall",
+          "status": "untested",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "cursor-ide-linux",
+      "host": "cursor",
+      "surface": "Cursor IDE",
+      "hostVersion": "unrecorded",
+      "os": "Linux",
+      "architecture": "unrecorded",
+      "model": "unrecorded",
+      "supportState": "expected-untested",
+      "rationale": "Official Cursor Plugin documentation describes this candidate surface; the host was unavailable during implementation.",
+      "operations": [
+        {
+          "operation": "install",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "discovery",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "activation",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "workflow",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "update",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "rollback",
+          "status": "untested",
+          "evidence": []
+        },
+        {
+          "operation": "uninstall",
+          "status": "untested",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "cursor-cli-not-claimed",
+      "host": "cursor",
+      "surface": "Cursor CLI",
+      "hostVersion": "not-applicable",
+      "os": "not-applicable",
+      "architecture": "not-applicable",
+      "model": "not-applicable",
+      "supportState": "not-claimed",
+      "rationale": "Cursor IDE plugin documentation does not establish CLI parity; no CLI support is claimed or tested.",
+      "operations": [
+        {
+          "operation": "install",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "discovery",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "activation",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "workflow",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "update",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "rollback",
+          "status": "not-claimed",
+          "evidence": []
+        },
+        {
+          "operation": "uninstall",
+          "status": "not-claimed",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,7 @@ The roadmap improves packaging and developer experience without adding a doctor 
 
 ## Stage 2 — Host-native developer experience
 
-**Status:** In progress. Twelve generated commands and host-specific documentation are implemented locally; real-host discovery, invocation, and golden paths remain open.
+**Status:** Host-native artifacts are merged; real-host discovery, invocation, and golden-path exit evidence remain open.
 
 - Generate all 12 upstream commands into Cursor's auto-discovered `commands/` directory and enforce exact inventory/content drift checks.
 - Document the real copied-directory local-plugin flow, including the complete runtime payload and external-symlink limitation.
@@ -23,6 +23,8 @@ The roadmap improves packaging and developer experience without adding a doctor 
 - Complete real-host workflows before capturing screenshots or presenting review materials as verified evidence.
 
 ## Stage 3 — Behavior, safety, and compatibility
+
+**Status:** In progress. Versioned inventories, compatibility states, result templates, and structural validation are present; no live behavior or compatibility result has been recorded.
 
 - Run direct, indirect, negative, overlap, and safety cases with recorded host/model/date metadata.
 - Test representative golden paths with and without the distribution.

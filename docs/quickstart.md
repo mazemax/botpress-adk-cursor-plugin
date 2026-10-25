@@ -18,7 +18,7 @@ Cursor's documented local-plugin flow uses real copied directories. The flow bel
 
 1. Clone the intended revision of `https://github.com/mazemax/botpress-adk-cursor-plugin` and record its full commit SHA.
 2. Create a real directory at `~/.cursor/plugins/local/botpress-adk-community`.
-3. Copy the runtime payload into that directory: `.cursor-plugin/plugin.json`, `skills/`, `commands/`, `assets/logo.svg`, `LICENSE`, and `NOTICE.md`. Preserve the relative layout; omit maintainer tooling, `node_modules/`, `.git/`, and local secrets.
+3. Copy the runtime payload into that directory: `.cursor-plugin/plugin.json`, `cursor/skills/`, `commands/`, `assets/logo.svg`, `LICENSE`, and `NOTICE.md`. Preserve the relative layout; omit maintainer tooling, `node_modules/`, `.git/`, and local secrets. The manifest explicitly loads `cursor/skills/` instead of the managed `skills/` fallback directory.
 4. Do not use a symlink to a repository outside `~/.cursor/plugins/local`; Cursor documents that external-target symlinks are skipped.
 5. Restart Cursor or run **Developer: Reload Window**.
 6. Open **Customize** and inspect the expected skills and commands.

@@ -14,5 +14,6 @@
     "agent-development",
     "community"
   ],
-  "logo": "assets/logo.svg"
+  "logo": "assets/logo.svg",
+  "skills": "./cursor/skills"
 }

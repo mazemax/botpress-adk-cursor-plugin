@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": 1,
+  "distributionVersion": "1.0.0-rc.1",
+  "upstreamCommit": "79abe10503bf6dc70486737c94159322e108e496",
+  "cases": [
+    {
+      "id": "adk-positive-explicit",
+      "kind": "positive",
+      "skill": "adk",
+      "category": "explicit",
+      "prompt": "Use the `adk` skill to explain where a new Botpress ADK action belongs in this project.",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/actions.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Identify the official action location and convention without inventing a project path.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk",
+      "category": "natural-language",
+      "prompt": "Add an order-lookup action to my Botpress ADK bot and show the proposed file before writing it.",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/actions.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use ADK action guidance and review the proposed write before changing the disposable project.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-positive-indirect",
+      "kind": "positive",
+      "skill": "adk",
+      "category": "indirect",
+      "prompt": "My bot needs to call our inventory API when a customer asks for stock. Which ADK primitive should I add?",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/actions.md",
+        "skills/adk/references/tools.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Select an appropriate ADK primitive from the official guidance and explain the choice.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-positive-project-context",
+      "kind": "positive",
+      "skill": "adk",
+      "category": "project-context",
+      "prompt": "This directory has `agent.config.ts` and `src/workflows/`. Explain how the existing workflow is registered without changing it.",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/workflows.md",
+        "skills/adk/references/workflow-steps.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Inspect the ADK project conventions and explain registration from actual files rather than speculation.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-positive-workflow",
+      "kind": "positive",
+      "skill": "adk",
+      "category": "workflow",
+      "prompt": "Guide me through adding and statically validating one synthetic ADK action in this disposable project; stop before deployment.",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/actions.md",
+        "skills/adk/references/cli.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Follow an official build/validate sequence and stop without deployment or unreviewed external changes.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk",
+      "category": "near-neighbor",
+      "prompt": "Which Dev Console tab shows Agent Steps for this running ADK bot?",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Answer the Dev Console navigation question without activating core `adk` merely because ADK is mentioned.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk",
+      "category": "non-botpress",
+      "prompt": "Help me center a generic React button with CSS.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Answer as generic frontend work without loading Botpress ADK guidance.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk",
+      "category": "unrelated-development",
+      "prompt": "Write a Python function that parses a CSV of synthetic temperatures.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Keep the task outside Botpress and do not inspect or mutate an ADK project.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-debugger-positive-explicit",
+      "kind": "positive",
+      "skill": "adk-debugger",
+      "category": "explicit",
+      "prompt": "Use `adk-debugger` to inspect this sanitized ADK trace and explain why the wrong tool was called.",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/traces-and-logs.md",
+        "skills/adk-debugger/references/llm-debugging.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use trace evidence and the official debugging workflow rather than guessing a fix.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-debugger-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk-debugger",
+      "category": "natural-language",
+      "prompt": "My ADK bot answered with the wrong tool yesterday. Help me diagnose it from logs and traces without deploying.",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/debug-workflow.md",
+        "skills/adk-debugger/references/llm-debugging.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Route to systematic ADK debugging and preserve the no-deployment boundary.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-debugger-positive-indirect",
+      "kind": "positive",
+      "skill": "adk-debugger",
+      "category": "indirect",
+      "prompt": "A customer message starts my order workflow but it never reaches the second step. Where do I look first?",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/common-failures.md",
+        "skills/adk-debugger/references/debug-workflow.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Investigate the stuck ADK workflow using checks, runtime evidence, and the debug loop.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-debugger-positive-project-context",
+      "kind": "positive",
+      "skill": "adk-debugger",
+      "category": "project-context",
+      "prompt": "This ADK project started failing validation after my last config change. Compare the sanitized check output and recent traces before proposing a fix.",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/common-failures.md",
+        "skills/adk-debugger/references/traces-and-logs.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Classify the failure from actual project evidence before suggesting a targeted change.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-debugger-positive-workflow",
+      "kind": "positive",
+      "skill": "adk-debugger",
+      "category": "workflow",
+      "prompt": "Walk through validate, reproduce, logs, traces, targeted fix, and verification for this synthetic ADK failure. Do not touch production.",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/debug-workflow.md",
+        "skills/adk-debugger/references/traces-and-logs.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Follow the full official debug loop in a non-production environment and stop before external mutation.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-debugger-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk-debugger",
+      "category": "near-neighbor",
+      "prompt": "Write a repeatable ADK eval that asserts the correct order tool is called.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-debugger"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Route to eval authoring rather than activating the debugger for a new regression test.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-debugger-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk-debugger",
+      "category": "non-botpress",
+      "prompt": "Why does my generic Express server return 404 for an unregistered route?",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-debugger"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Debug the ordinary web server without Botpress trace or ADK debugger guidance.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-debugger-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk-debugger",
+      "category": "unrelated-development",
+      "prompt": "Review this CSS flexbox layout that wraps onto two lines.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-debugger"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not invoke ADK runtime diagnostics for a generic layout question.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-dev-console-positive-explicit",
+      "kind": "positive",
+      "skill": "adk-dev-console",
+      "category": "explicit",
+      "prompt": "Use `adk-dev-console` to explain Agent Steps in the local Dev Console.",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/agent-steps.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Explain the actual Agent Steps UI hierarchy from the official reference.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-dev-console-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk-dev-console",
+      "category": "natural-language",
+      "prompt": "Where in the Botpress ADK Dev Console can I inspect a conversation and its traces?",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/pages.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Name the relevant Dev Console pages without running unrelated CLI commands.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-dev-console-positive-indirect",
+      "kind": "positive",
+      "skill": "adk-dev-console",
+      "category": "indirect",
+      "prompt": "One step in the local agent UI is red and shows a tool error. What does that mean?",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/agent-steps.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Interpret the visible Dev Console execution state using the Agent Steps guidance.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-dev-console-positive-project-context",
+      "kind": "positive",
+      "skill": "adk-dev-console",
+      "category": "project-context",
+      "prompt": "Two disposable ADK agents are running locally. Explain how to switch between them in the shared dashboard.",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/multi-agent-dashboard.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use the multi-agent dashboard guidance and distinguish local dev from prod/cloud targets.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-dev-console-positive-workflow",
+      "kind": "positive",
+      "skill": "adk-dev-console",
+      "category": "workflow",
+      "prompt": "Guide me through opening a synthetic conversation in the local Dev Console and inspecting its turn, tool call, and state mutation. Do not switch to prod.",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/pages.md",
+        "skills/adk-dev-console/references/agent-steps.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use a read-oriented Dev Console inspection path and keep prod targets and mutations untouched.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-dev-console-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk-dev-console",
+      "category": "near-neighbor",
+      "prompt": "Which ADK CLI command prints recent sanitized error logs as JSON?",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-dev-console"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Answer the CLI/debugging question without activating Dev Console UI guidance unnecessarily.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-dev-console-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk-dev-console",
+      "category": "non-botpress",
+      "prompt": "Explain the Network panel in Chrome DevTools.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-dev-console"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not confuse a browser developer tool with the Botpress ADK Dev Console.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-dev-console-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk-dev-console",
+      "category": "unrelated-development",
+      "prompt": "Create a generic SQL table for synthetic product inventory.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-dev-console"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Keep the generic database task free of Dev Console and Botpress-specific actions.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-docs-positive-explicit",
+      "kind": "positive",
+      "skill": "adk-docs",
+      "category": "explicit",
+      "prompt": "Use `adk-docs` to create a guide for this disposable ADK order workflow.",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use documentation standards and verifiable project examples rather than invented code.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-docs-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk-docs",
+      "category": "natural-language",
+      "prompt": "Review my ADK bot guide for inaccurate examples and report only the documentation problems you find.",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Perform an ADK documentation review grounded in the actual project and official sources.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-docs-positive-indirect",
+      "kind": "positive",
+      "skill": "adk-docs",
+      "category": "indirect",
+      "prompt": "I refactored the checkout workflow last week and the project guide no longer matches it. What should I update?",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Recognize a documentation synchronization task instead of redesigning the workflow.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-docs-positive-project-context",
+      "kind": "positive",
+      "skill": "adk-docs",
+      "category": "project-context",
+      "prompt": "Find the guide for the payment handler in this ADK project and check whether its examples match the current action.",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Inspect the project documentation and implementation before reporting accuracy findings.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-docs-positive-workflow",
+      "kind": "positive",
+      "skill": "adk-docs",
+      "category": "workflow",
+      "prompt": "Create a short verified guide for one synthetic ADK action, citing the actual source file and preserving unrelated docs.",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Follow the code-first documentation workflow and avoid unrelated edits or speculative examples.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-docs-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk-docs",
+      "category": "near-neighbor",
+      "prompt": "Explain the difference between ADK actions and workflows with a small verified example.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-docs"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Answer the ADK concept question without treating it as a project-documentation task.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-docs-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk-docs",
+      "category": "non-botpress",
+      "prompt": "Write a README outline for my generic Python CSV utility.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-docs"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not load ADK documentation standards for a non-Botpress project.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-docs-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk-docs",
+      "category": "unrelated-development",
+      "prompt": "Proofread this marketing homepage paragraph for grammar only.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-docs"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not inspect ADK sources or activate bot documentation guidance for copy editing.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-evals-positive-explicit",
+      "kind": "positive",
+      "skill": "adk-evals",
+      "category": "explicit",
+      "prompt": "Use `adk-evals` to write an official ADK regression eval for a synthetic order lookup.",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/eval-format.md",
+        "skills/adk-evals/references/test-patterns.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use the official eval format and explain assertions without adding CI infrastructure.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-evals-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk-evals",
+      "category": "natural-language",
+      "prompt": "How do I test that my ADK bot calls the order tool with the right order ID?",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/eval-format.md",
+        "skills/adk-evals/references/test-patterns.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Choose official ADK eval assertions for the requested tool behavior.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-evals-positive-indirect",
+      "kind": "positive",
+      "skill": "adk-evals",
+      "category": "indirect",
+      "prompt": "We fixed a wrong-tool bug once. How can we make sure the same conversation does not regress next week?",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/eval-format.md",
+        "skills/adk-evals/references/testing-workflow.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Recommend a repeatable ADK regression eval rather than a one-off debugging session.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-evals-positive-project-context",
+      "kind": "positive",
+      "skill": "adk-evals",
+      "category": "project-context",
+      "prompt": "This project has an existing eval for a greeting conversation. Explain its response and state assertions without running it.",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/eval-format.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Read the actual eval structure and explain only the requested official assertion types.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-evals-positive-workflow",
+      "kind": "positive",
+      "skill": "adk-evals",
+      "category": "workflow",
+      "prompt": "Help me write, run, and inspect one synthetic ADK eval against a disposable dev bot, then iterate on a failed assertion.",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/testing-workflow.md",
+        "skills/adk-evals/references/eval-format.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Follow the official eval loop only in non-production and use synthetic state and inputs.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-evals-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk-evals",
+      "category": "near-neighbor",
+      "prompt": "Diagnose this one-off wrong-tool call from a sanitized ADK trace before I write any tests.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-evals"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Route to debugging rather than eval authoring for the initial diagnosis.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-evals-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk-evals",
+      "category": "non-botpress",
+      "prompt": "Write Jest tests for a generic React counter component.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-evals"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use ordinary frontend testing knowledge without loading official ADK eval guidance.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-evals-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk-evals",
+      "category": "unrelated-development",
+      "prompt": "Add a test job to a generic npm package's existing GitHub Actions workflow.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-evals"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not turn a generic CI request into an ADK eval or a new Eval CI feature.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-frontend-positive-explicit",
+      "kind": "positive",
+      "skill": "adk-frontend",
+      "category": "explicit",
+      "prompt": "Use `adk-frontend` to add a typed client call for this existing ADK action in my React app.",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/botpress-client.md",
+        "skills/adk-frontend/references/calling-actions.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use official Botpress client and action-call guidance while preserving type safety.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-frontend-positive-natural-language",
+      "kind": "positive",
+      "skill": "adk-frontend",
+      "category": "natural-language",
+      "prompt": "Connect my React frontend to a Botpress ADK bot action and show how errors are handled.",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/calling-actions.md",
+        "skills/adk-frontend/references/service-layer.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Route to ADK frontend integration rather than generic React or bot-side implementation guidance.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-frontend-positive-indirect",
+      "kind": "positive",
+      "skill": "adk-frontend",
+      "category": "indirect",
+      "prompt": "Users should log in to my ADK frontend without exposing a personal access token to browser source or logs. What pattern should I use?",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/authentication.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use the official frontend authentication guidance and explicitly protect PATs.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-frontend-positive-project-context",
+      "kind": "positive",
+      "skill": "adk-frontend",
+      "category": "project-context",
+      "prompt": "My frontend cannot find the generated types for this ADK bot's actions. Inspect the disposable project setup and explain the type-generation path.",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/type-generation.md",
+        "skills/adk-frontend/references/project-setup.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use ADK generated-type guidance grounded in the actual project layout.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-frontend-positive-workflow",
+      "kind": "positive",
+      "skill": "adk-frontend",
+      "category": "workflow",
+      "prompt": "Build one typed frontend service for a synthetic ADK action, validate it locally, keep PATs out of source, and do not deploy the bot.",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/service-layer.md",
+        "skills/adk-frontend/references/type-generation.md",
+        "skills/adk-frontend/references/authentication.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Follow the official frontend service workflow with credential and no-deployment boundaries.",
+        "Record activated skills and actually loaded references; do not infer them from the prompt or package inventory."
+      ]
+    },
+    {
+      "id": "adk-frontend-negative-near-neighbor",
+      "kind": "negative",
+      "skill": "adk-frontend",
+      "category": "near-neighbor",
+      "prompt": "Implement a bot-side ADK action that returns synthetic inventory data; there is no user interface.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-frontend"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use core ADK action guidance without loading frontend integration guidance.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-frontend-negative-non-botpress",
+      "kind": "negative",
+      "skill": "adk-frontend",
+      "category": "non-botpress",
+      "prompt": "Center a generic React button and add a hover style.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-frontend"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Answer the generic UI question without Botpress client or authentication guidance.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "adk-frontend-negative-unrelated-development",
+      "kind": "negative",
+      "skill": "adk-frontend",
+      "category": "unrelated-development",
+      "prompt": "Create a static HTML landing page for a local photography club with no backend.",
+      "expectedSkills": [],
+      "forbiddenSkills": [
+        "adk-frontend"
+      ],
+      "expectedReferences": [],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Do not introduce Botpress credentials, clients, or ADK frontend patterns.",
+        "Record any alternate routing; no production deployment, credential disclosure, or external mutation is permitted."
+      ]
+    },
+    {
+      "id": "overlap-core-debugger",
+      "kind": "overlap",
+      "overlap": "debugger",
+      "category": "routing",
+      "prompt": "My ADK bot builds but selects the wrong tool. Inspect this sanitized trace and diagnose the failure before changing tests or UI.",
+      "expectedSkills": [
+        "adk-debugger"
+      ],
+      "forbiddenSkills": [
+        "adk-evals",
+        "adk-frontend",
+        "adk-docs",
+        "adk-dev-console"
+      ],
+      "expectedReferences": [
+        "skills/adk-debugger/SKILL.md",
+        "skills/adk-debugger/references/debug-workflow.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Prioritize runtime diagnosis over eval authoring, frontend work, documentation, or console navigation.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    },
+    {
+      "id": "overlap-core-evals",
+      "kind": "overlap",
+      "overlap": "evals",
+      "category": "routing",
+      "prompt": "Turn this already-diagnosed ADK wrong-tool example into a repeatable regression eval with tool assertions.",
+      "expectedSkills": [
+        "adk-evals"
+      ],
+      "forbiddenSkills": [
+        "adk-debugger",
+        "adk-frontend",
+        "adk-docs",
+        "adk-dev-console"
+      ],
+      "expectedReferences": [
+        "skills/adk-evals/SKILL.md",
+        "skills/adk-evals/references/eval-format.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Prioritize eval authoring because diagnosis is already complete; do not reopen a debugging workflow.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    },
+    {
+      "id": "overlap-core-frontend",
+      "kind": "overlap",
+      "overlap": "frontend",
+      "category": "routing",
+      "prompt": "Keep this working ADK action unchanged and add a typed React service that calls it without exposing a PAT.",
+      "expectedSkills": [
+        "adk-frontend"
+      ],
+      "forbiddenSkills": [
+        "adk-debugger",
+        "adk-evals",
+        "adk-docs",
+        "adk-dev-console"
+      ],
+      "expectedReferences": [
+        "skills/adk-frontend/SKILL.md",
+        "skills/adk-frontend/references/calling-actions.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Prioritize frontend integration and credential safety rather than changing the bot-side action.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    },
+    {
+      "id": "overlap-core-docs",
+      "kind": "overlap",
+      "overlap": "docs",
+      "category": "routing",
+      "prompt": "Audit this existing ADK project guide against its current actions and report stale examples without changing bot code.",
+      "expectedSkills": [
+        "adk-docs"
+      ],
+      "forbiddenSkills": [
+        "adk-debugger",
+        "adk-evals",
+        "adk-frontend",
+        "adk-dev-console"
+      ],
+      "expectedReferences": [
+        "skills/adk-docs/SKILL.md",
+        "skills/adk-docs/references/doc-standards.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Prioritize documentation accuracy and leave implementation and runtime workflows untouched.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    },
+    {
+      "id": "overlap-core-integrations",
+      "kind": "overlap",
+      "overlap": "integrations",
+      "category": "routing",
+      "prompt": "Find the official ADK guidance for adding a Slack integration, report version and configuration requirements, and stop before installation.",
+      "expectedSkills": [
+        "adk"
+      ],
+      "forbiddenSkills": [
+        "adk-debugger",
+        "adk-evals",
+        "adk-frontend",
+        "adk-docs",
+        "adk-dev-console"
+      ],
+      "expectedReferences": [
+        "skills/adk/SKILL.md",
+        "skills/adk/references/integrations.md",
+        "skills/adk/references/integration-actions.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Use core ADK integration guidance and make no workspace change.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    },
+    {
+      "id": "overlap-core-dev-console",
+      "kind": "overlap",
+      "overlap": "dev-console",
+      "category": "routing",
+      "prompt": "Explain which local ADK Dev Console page shows a conversation's Agent Steps; do not change project code or run a debugger.",
+      "expectedSkills": [
+        "adk-dev-console"
+      ],
+      "forbiddenSkills": [
+        "adk-debugger",
+        "adk-evals",
+        "adk-frontend",
+        "adk-docs"
+      ],
+      "expectedReferences": [
+        "skills/adk-dev-console/SKILL.md",
+        "skills/adk-dev-console/references/pages.md",
+        "skills/adk-dev-console/references/agent-steps.md"
+      ],
+      "freshConversation": true,
+      "observableAssertions": [
+        "Prioritize Dev Console navigation and avoid unrelated debugging or project work.",
+        "Record all activated skills and loaded references; supplementary core ADK context alone is not a failure unless explicitly forbidden."
+      ]
+    }
+  ]
+}
