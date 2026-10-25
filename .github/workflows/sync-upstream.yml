@@ -1,0 +1,73 @@
+name: sync-upstream
+
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  reviewed-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the distribution
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install locked maintainer tooling
+        run: npm ci
+      - name: Check the public upstream branch without executing it
+        id: upstream
+        run: npm run --silent sync:check -- --json --github-output
+      - name: Check for an existing review branch
+        id: review
+        if: steps.upstream.outputs.update_available == 'true'
+        env:
+          BRANCH: ${{ steps.upstream.outputs.branch }}
+        run: |
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Apply the candidate snapshot for review
+        if: steps.upstream.outputs.update_available == 'true' && steps.review.outputs.exists == 'false'
+        run: npm run sync:apply -- --commit "${{ steps.upstream.outputs.latest_commit }}"
+      - name: Measure the candidate context cost
+        if: steps.upstream.outputs.update_available == 'true' && steps.review.outputs.exists == 'false'
+        run: npm run measure:context -- --write
+      - name: Validate the candidate snapshot
+        if: steps.upstream.outputs.update_available == 'true' && steps.review.outputs.exists == 'false'
+        run: npm run check && npm run sync:verify
+      - name: Commit and push the review branch
+        if: steps.upstream.outputs.update_available == 'true' && steps.review.outputs.exists == 'false'
+        env:
+          BRANCH: ${{ steps.upstream.outputs.branch }}
+          LATEST: ${{ steps.upstream.outputs.latest_commit }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add -A -- skills upstream LICENSE UPSTREAM.json tests/results/context-baseline.json
+          git commit -m "chore: review botpress/skills $LATEST"
+          git push origin "HEAD:refs/heads/$BRANCH"
+      - name: Open a non-automerging review pull request
+        if: steps.upstream.outputs.update_available == 'true' && steps.review.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.upstream.outputs.branch }}
+          LATEST: ${{ steps.upstream.outputs.latest_commit }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore: review botpress/skills ${LATEST:0:12}" \
+            --body-file .sync/summary.md

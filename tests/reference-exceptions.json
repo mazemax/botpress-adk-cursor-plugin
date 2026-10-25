@@ -1,0 +1,17 @@
+{
+  "upstreamCommit": "79abe10503bf6dc70486737c94159322e108e496",
+  "exceptions": [
+    {
+      "file": "skills/adk-frontend/references/authentication.md",
+      "target": "../tables.md",
+      "correctTarget": "../../adk/references/tables.md",
+      "note": "Broken in the pinned upstream and preserved verbatim; see docs/compatibility.md."
+    },
+    {
+      "file": "skills/adk-frontend/references/calling-actions.md",
+      "target": "../actions.md",
+      "correctTarget": "../../adk/references/actions.md",
+      "note": "Broken in the pinned upstream and preserved verbatim; see docs/compatibility.md."
+    }
+  ]
+}

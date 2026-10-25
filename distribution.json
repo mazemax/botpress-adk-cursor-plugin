@@ -1,0 +1,7 @@
+{
+  "host": "cursor",
+  "repository": "https://github.com/mazemax/botpress-adk-cursor-plugin",
+  "pluginName": "botpress-adk-community",
+  "displayName": "Botpress ADK Community",
+  "manifestPath": ".cursor-plugin/plugin.json"
+}

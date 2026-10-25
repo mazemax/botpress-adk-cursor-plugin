@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "79abe10503bf6dc70486737c94159322e108e496",
+  "upstreamTag": "v2.0.7",
+  "tokenEstimateMethod": "ceil((skill name + newline + description).length / 4); estimate only, not provider tokenization",
+  "skills": [
+    {
+      "name": "adk",
+      "discoveryCharacters": 149,
+      "discoveryUtf8Bytes": 149,
+      "estimatedDiscoveryTokens": 38,
+      "skillMarkdownBytes": 20594,
+      "referenceFiles": 31,
+      "referenceUtf8Bytes": 540843,
+      "totalUtf8Bytes": 561437
+    },
+    {
+      "name": "adk-debugger",
+      "discoveryCharacters": 125,
+      "discoveryUtf8Bytes": 127,
+      "estimatedDiscoveryTokens": 32,
+      "skillMarkdownBytes": 10237,
+      "referenceFiles": 6,
+      "referenceUtf8Bytes": 65178,
+      "totalUtf8Bytes": 75415
+    },
+    {
+      "name": "adk-dev-console",
+      "discoveryCharacters": 218,
+      "discoveryUtf8Bytes": 220,
+      "estimatedDiscoveryTokens": 55,
+      "skillMarkdownBytes": 9280,
+      "referenceFiles": 4,
+      "referenceUtf8Bytes": 20193,
+      "totalUtf8Bytes": 29473
+    },
+    {
+      "name": "adk-docs",
+      "discoveryCharacters": 160,
+      "discoveryUtf8Bytes": 160,
+      "estimatedDiscoveryTokens": 40,
+      "skillMarkdownBytes": 5396,
+      "referenceFiles": 1,
+      "referenceUtf8Bytes": 3710,
+      "totalUtf8Bytes": 9106
+    },
+    {
+      "name": "adk-evals",
+      "discoveryCharacters": 213,
+      "discoveryUtf8Bytes": 213,
+      "estimatedDiscoveryTokens": 54,
+      "skillMarkdownBytes": 8066,
+      "referenceFiles": 3,
+      "referenceUtf8Bytes": 22360,
+      "totalUtf8Bytes": 30426
+    },
+    {
+      "name": "adk-frontend",
+      "discoveryCharacters": 178,
+      "discoveryUtf8Bytes": 178,
+      "estimatedDiscoveryTokens": 45,
+      "skillMarkdownBytes": 15078,
+      "referenceFiles": 11,
+      "referenceUtf8Bytes": 172134,
+      "totalUtf8Bytes": 187212
+    }
+  ],
+  "totals": {
+    "skills": 6,
+    "discoveryCharacters": 1043,
+    "discoveryUtf8Bytes": 1047,
+    "estimatedDiscoveryTokens": 264,
+    "skillMarkdownUtf8Bytes": 68651,
+    "referenceFiles": 56,
+    "referenceUtf8Bytes": 824418,
+    "packageSkillUtf8Bytes": 893069
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "repository": "https://github.com/botpress/skills",
+  "sourceBranch": "master",
+  "tag": "v2.0.7",
+  "commit": "79abe10503bf6dc70486737c94159322e108e496",
+  "upstreamPluginVersion": "2.0.7",
+  "distributionVersion": "1.0.0-rc.1",
+  "syncedAt": "2026-10-25T04:47:41.053710Z",
+  "skillInventory": [
+    "adk",
+    "adk-debugger",
+    "adk-dev-console",
+    "adk-docs",
+    "adk-evals",
+    "adk-frontend"
+  ],
+  "commandInventory": [
+    "adk-build",
+    "adk-debug",
+    "adk-dev-console",
+    "adk-document",
+    "adk-eval",
+    "adk-explain",
+    "adk-frontend",
+    "adk-init",
+    "adk-integration",
+    "adk-ship",
+    "adk-test",
+    "adk-validate"
+  ],
+  "skillFileCount": 62,
+  "commandFileCount": 12,
+  "licenseSha256": "7f8b6115911c9e7a2871e49f57205059bc85c32175c856d0e14f5431f8ec5c2e",
+  "files": {
+    "LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "7f8b6115911c9e7a2871e49f57205059bc85c32175c856d0e14f5431f8ec5c2e"
+    },
+    "skills/adk-debugger/SKILL.md": {
+      "upstreamPath": "skills/adk-debugger/SKILL.md",
+      "sha256": "f8b5b924c84de25ceceb62a3c28dc46ea88fc9c7897ccd78fb158cd17caf9899"
+    },
+    "skills/adk-debugger/references/common-failures.md": {
+      "upstreamPath": "skills/adk-debugger/references/common-failures.md",
+      "sha256": "5dfaadafa4ec0857bbc5b87005f52873157d97a9bd29d75dcbc707e93dd94f93"
+    },
+    "skills/adk-debugger/references/conversation-analysis.md": {
+      "upstreamPath": "skills/adk-debugger/references/conversation-analysis.md",
+      "sha256": "408757d005de0b246bbbd5125681a441dbc267209106382a87de85bb92f27536"
+    },
+    "skills/adk-debugger/references/debug-workflow.md": {
+      "upstreamPath": "skills/adk-debugger/references/debug-workflow.md",
+      "sha256": "7443942dbc12183a45b9ad8e0bc1527efd6c8aaa2ab0ecb838465a36b90ae94b"
+    },
+    "skills/adk-debugger/references/llm-debugging.md": {
+      "upstreamPath": "skills/adk-debugger/references/llm-debugging.md",
+      "sha256": "015b615594b32d87ef9bab7944ddd36ad3187211d7b0b15b35ffdc0308307e49"
+    },
+    "skills/adk-debugger/references/trace-summarization.md": {
+      "upstreamPath": "skills/adk-debugger/references/trace-summarization.md",
+      "sha256": "956514b3f92c6c924947453771828327d927c0f952a7f7401eaf85f9118fb207"
+    },
+    "skills/adk-debugger/references/traces-and-logs.md": {
+      "upstreamPath": "skills/adk-debugger/references/traces-and-logs.md",
+      "sha256": "85ecd78dd1d22796326e8c4263273c98c256fe9a6d8e91b3204a2249b8aac47a"
+    },
+    "skills/adk-dev-console/SKILL.md": {
+      "upstreamPath": "skills/adk-dev-console/SKILL.md",
+      "sha256": "89df7ed38245d8640e540660eb115da46473959b691f5fdb0afc3f558767e567"
+    },
+    "skills/adk-dev-console/references/agent-steps.md": {
+      "upstreamPath": "skills/adk-dev-console/references/agent-steps.md",
+      "sha256": "56927ec670c0952b6bdc92a5878042ea4e6fb16a00cd4a74f1fe65fbafaf990c"
+    },
+    "skills/adk-dev-console/references/component-registry.md": {
+      "upstreamPath": "skills/adk-dev-console/references/component-registry.md",
+      "sha256": "05bf5a7e4679e7f422f302ebd10911408b68bc14031b34c2f53404fefc90ccf6"
+    },
+    "skills/adk-dev-console/references/multi-agent-dashboard.md": {
+      "upstreamPath": "skills/adk-dev-console/references/multi-agent-dashboard.md",
+      "sha256": "17dba59b6ed95745baa26855bab75c64265dd30e7aece0e9f1cf3f5cf775e8b4"
+    },
+    "skills/adk-dev-console/references/pages.md": {
+      "upstreamPath": "skills/adk-dev-console/references/pages.md",
+      "sha256": "d03e4cb93eb1caa3f2a01353820df047329efb4aca38c593050e09e0d4b72731"
+    },
+    "skills/adk-docs/SKILL.md": {
+      "upstreamPath": "skills/adk-docs/SKILL.md",
+      "sha256": "183651fdc259eb2b023905c3383d9bd32cb4e1b04121a42b0d27e45ab2538fb0"
+    },
+    "skills/adk-docs/references/doc-standards.md": {
+      "upstreamPath": "skills/adk-docs/references/doc-standards.md",
+      "sha256": "5129cb4d2254296ac206788a588f91712b6fe0f182bc3a6c74bb07ce90bf6583"
+    },
+    "skills/adk-evals/SKILL.md": {
+      "upstreamPath": "skills/adk-evals/SKILL.md",
+      "sha256": "c18ea1a0175d157f3c5e1f9964eb1dc0ffee0c400d4058e7f22e6258510390fa"
+    },
+    "skills/adk-evals/references/eval-format.md": {
+      "upstreamPath": "skills/adk-evals/references/eval-format.md",
+      "sha256": "83ae2d7a03b31cac014c38008bf70cab9e9fe56cd0fae2154292341fef0ec1bc"
+    },
+    "skills/adk-evals/references/test-patterns.md": {
+      "upstreamPath": "skills/adk-evals/references/test-patterns.md",
+      "sha256": "ae8335327962cddff9789b3b067ed17df7abac3bd8097331f74dbda0937d8b88"
+    },
+    "skills/adk-evals/references/testing-workflow.md": {
+      "upstreamPath": "skills/adk-evals/references/testing-workflow.md",
+      "sha256": "0e92b42694799ba91720fe3961e8e4c23471415b6d9cd5f48c1ad2c2fd41505b"
+    },
+    "skills/adk-frontend/SKILL.md": {
+      "upstreamPath": "skills/adk-frontend/SKILL.md",
+      "sha256": "80a5f73cf900d092487e387bcaa397012eb573e2f484b51402d081f3e896fd16"
+    },
+    "skills/adk-frontend/references/authentication.md": {
+      "upstreamPath": "skills/adk-frontend/references/authentication.md",
+      "sha256": "f94f2b91c6c84d65b85af1d1abb78533728e38d883ae3ff7404c5faceace8ba7"
+    },
+    "skills/adk-frontend/references/botpress-client.md": {
+      "upstreamPath": "skills/adk-frontend/references/botpress-client.md",
+      "sha256": "46142bafd1d95524c6bd567f6ecf66d5b6cd9b542645d264d78964b9b02bfcbc"
+    },
+    "skills/adk-frontend/references/calling-actions.md": {
+      "upstreamPath": "skills/adk-frontend/references/calling-actions.md",
+      "sha256": "4d573e2634cd2ab550f7827b12faf41d4c31215d08411e6bc04ddf6740e2ab7a"
+    },
+    "skills/adk-frontend/references/data-fetching.md": {
+      "upstreamPath": "skills/adk-frontend/references/data-fetching.md",
+      "sha256": "9520f956ed56f5db68609e4922770a7e758bec9f7b0887bbce8d155ba9f4dced"
+    },
+    "skills/adk-frontend/references/overview.md": {
+      "upstreamPath": "skills/adk-frontend/references/overview.md",
+      "sha256": "8b3d0e0ae3c50ec046eb22c2930cf6212eab231019f80daa06271a61ca939b59"
+    },
+    "skills/adk-frontend/references/project-setup.md": {
+      "upstreamPath": "skills/adk-frontend/references/project-setup.md",
+      "sha256": "02eeb86d0ecd07a4dea1893f29d475c47dec70e30b93066ae99d92924a25b050"
+    },
+    "skills/adk-frontend/references/realtime-updates.md": {
+      "upstreamPath": "skills/adk-frontend/references/realtime-updates.md",
+      "sha256": "9e953984c2a181d13ceb8712dc85f53feddbe1700d2ae625e30435e721ca5ad4"
+    },
+    "skills/adk-frontend/references/recommended-stack.md": {
+      "upstreamPath": "skills/adk-frontend/references/recommended-stack.md",
+      "sha256": "39ffeb8d4d6e2251e86c07d1ad28927a080edf358cef1b02e540002b712c289a"
+    },
+    "skills/adk-frontend/references/service-layer.md": {
+      "upstreamPath": "skills/adk-frontend/references/service-layer.md",
+      "sha256": "5d1d5fd444961139ed5bd316cfaa5760468cc7ad237434a522b554f9a598888f"
+    },
+    "skills/adk-frontend/references/state-management.md": {
+      "upstreamPath": "skills/adk-frontend/references/state-management.md",
+      "sha256": "0d089a4e4486fe42c8a6a339ee4b19257f01ea33b633c8f24dc2b9e24020d909"
+    },
+    "skills/adk-frontend/references/type-generation.md": {
+      "upstreamPath": "skills/adk-frontend/references/type-generation.md",
+      "sha256": "ae36327a465d98f1cf4f2b031f45a7e980f05b248a586961a746ce99731f6b87"
+    },
+    "skills/adk/SKILL.md": {
+      "upstreamPath": "skills/adk/SKILL.md",
+      "sha256": "7a47a22e3edd6216e428e963c7b0d195e0183759c99c36298e2c456272d62bad"
+    },
+    "skills/adk/references/actions.md": {
+      "upstreamPath": "skills/adk/references/actions.md",
+      "sha256": "ffde69532b29a48f863be73f8dbdfd899d3e269e5fd6bd452798a6c05666fd7c"
+    },
+    "skills/adk/references/advanced-patterns.md": {
+      "upstreamPath": "skills/adk/references/advanced-patterns.md",
+      "sha256": "1ca1fd93cd091087f0ee09a2c99ee1c44e53fd37b6b7bc47827a1c2f83c40031"
+    },
+    "skills/adk/references/agent-config.md": {
+      "upstreamPath": "skills/adk/references/agent-config.md",
+      "sha256": "dfb36009a1ec2a487332be8de03c0a064fc7c82e346014d6900772b28f05a64b"
+    },
+    "skills/adk/references/assets.md": {
+      "upstreamPath": "skills/adk/references/assets.md",
+      "sha256": "ceab94c8c4d1344e1a1ee6a5b14b78b592f6d81e30a5b3223e67cd0892caec44"
+    },
+    "skills/adk/references/autonomous-execution.md": {
+      "upstreamPath": "skills/adk/references/autonomous-execution.md",
+      "sha256": "e0ead6f47b321c65a40ddc8ac1f12353e0a8b64659bab559077f86a47d01e08d"
+    },
+    "skills/adk/references/cli.md": {
+      "upstreamPath": "skills/adk/references/cli.md",
+      "sha256": "5e42b49c5d6854c37406524c13692d1ff769549f6e7c2a3905f2ec4bc58a269d"
+    },
+    "skills/adk/references/context-api.md": {
+      "upstreamPath": "skills/adk/references/context-api.md",
+      "sha256": "bd8fb18b7cd6040a37c577fba79940bb3b3cc45e7e2ca1ce6bd84af7639e222e"
+    },
+    "skills/adk/references/conversation-lifecycle.md": {
+      "upstreamPath": "skills/adk/references/conversation-lifecycle.md",
+      "sha256": "ac08a7de3b524b20e51240960ec813985e8fe695211e28b6aa01cd9efc7e7901"
+    },
+    "skills/adk/references/conversations.md": {
+      "upstreamPath": "skills/adk/references/conversations.md",
+      "sha256": "d5223fdda439d0a0c4384406f7e4c5001f237fe7391d1e1ea964d51c437694b9"
+    },
+    "skills/adk/references/custom-components.md": {
+      "upstreamPath": "skills/adk/references/custom-components.md",
+      "sha256": "2b097e5a038b9fe171e77021893db64fb77b298cec483603cb2c27e704863385"
+    },
+    "skills/adk/references/desk.md": {
+      "upstreamPath": "skills/adk/references/desk.md",
+      "sha256": "0cffd84b7ebf253690b13526c42c52922728dc745b9d045716a11075d8f3908e"
+    },
+    "skills/adk/references/evals.md": {
+      "upstreamPath": "skills/adk/references/evals.md",
+      "sha256": "7618a06ba1b348302b2ef14d7efd513600e99040358d2f0831a6848a0a30fd34"
+    },
+    "skills/adk/references/explain-config.md": {
+      "upstreamPath": "skills/adk/references/explain-config.md",
+      "sha256": "f63f80f9cd0ec3c2fdefc0b1bb3e69ddd898d30054051f3faae9da31d7db1e10"
+    },
+    "skills/adk/references/files.md": {
+      "upstreamPath": "skills/adk/references/files.md",
+      "sha256": "29fb7ba1e76eb457e7296fc8ab10480d7cf6dfe0f6e0c458f340e0379b88a619"
+    },
+    "skills/adk/references/integration-actions.md": {
+      "upstreamPath": "skills/adk/references/integration-actions.md",
+      "sha256": "c3fda00d643fd4fa5cc73ad2eca855e5b198dfd2dd63b0420cc480686f63817e"
+    },
+    "skills/adk/references/integrations.md": {
+      "upstreamPath": "skills/adk/references/integrations.md",
+      "sha256": "37d4040d15ce6437ccaac5ed17f0431f28d6ece105a6a40a03a4b3b3cdbd3688"
+    },
+    "skills/adk/references/interfaces.md": {
+      "upstreamPath": "skills/adk/references/interfaces.md",
+      "sha256": "ea3725ec9ad313edf28ed38cee4470c215eea363729e8e398684b1f65f035041"
+    },
+    "skills/adk/references/knowledge-bases.md": {
+      "upstreamPath": "skills/adk/references/knowledge-bases.md",
+      "sha256": "3d3a94d7e5e18fc7619a36de986622ddbb12b2419801cd630f130487be52b7ed"
+    },
+    "skills/adk/references/mcp-server.md": {
+      "upstreamPath": "skills/adk/references/mcp-server.md",
+      "sha256": "57a9060d48438a231c7bee49c137738054aee0dd0e2f11f3af466fe0c319974a"
+    },
+    "skills/adk/references/messages.md": {
+      "upstreamPath": "skills/adk/references/messages.md",
+      "sha256": "a4c9318a089291631148a7cc62d3f61369261b7fd00ad714f5e16956d9416085"
+    },
+    "skills/adk/references/model-configuration.md": {
+      "upstreamPath": "skills/adk/references/model-configuration.md",
+      "sha256": "9a5e7a836ce1bc128bce93e96537c794f8952f086345c4aa66d417e90e77d426"
+    },
+    "skills/adk/references/patterns-mistakes.md": {
+      "upstreamPath": "skills/adk/references/patterns-mistakes.md",
+      "sha256": "b397ef37f175d58a42f16d6fad786964ce10efd8471fa2c4b72fd417abd2ceed"
+    },
+    "skills/adk/references/plugins.md": {
+      "upstreamPath": "skills/adk/references/plugins.md",
+      "sha256": "955d3b7381b2c326112c95aa2fd5b6ff7b952c5176d8db81fd1a2daf793b8f48"
+    },
+    "skills/adk/references/tables.md": {
+      "upstreamPath": "skills/adk/references/tables.md",
+      "sha256": "2913b5ef61d9c86d704670c52425ccaccce32d190d03d3389294dc7091df6ded"
+    },
+    "skills/adk/references/tags.md": {
+      "upstreamPath": "skills/adk/references/tags.md",
+      "sha256": "c5459b14166875b907788bfa834a582dcd17de5addac61af8331a98c745364df"
+    },
+    "skills/adk/references/tools.md": {
+      "upstreamPath": "skills/adk/references/tools.md",
+      "sha256": "823a049e5269132705bc2c84af494db6cd353bde86faec963ee2e01f7cc89d0b"
+    },
+    "skills/adk/references/triggers.md": {
+      "upstreamPath": "skills/adk/references/triggers.md",
+      "sha256": "3e2b3c4f876b4ee15be2529268603008ad7c87e84f70d210a7248827e84cac78"
+    },
+    "skills/adk/references/workflow-steps.md": {
+      "upstreamPath": "skills/adk/references/workflow-steps.md",
+      "sha256": "333befad308082ffbbdeba76e5c5bf6d5e59d0d68f8a65f98281a647687a5c80"
+    },
+    "skills/adk/references/workflows.md": {
+      "upstreamPath": "skills/adk/references/workflows.md",
+      "sha256": "79df52a38d7df490cad69073187ae74341a1c2d8cbf5867b50ae9a737bc3812b"
+    },
+    "skills/adk/references/zai-agent-reference.md": {
+      "upstreamPath": "skills/adk/references/zai-agent-reference.md",
+      "sha256": "3a40421f023b665eac5cc9608b7372780995ed7c70a8b58a56030b885e210111"
+    },
+    "skills/adk/references/zai-complete-guide.md": {
+      "upstreamPath": "skills/adk/references/zai-complete-guide.md",
+      "sha256": "67c36a7f1625143bcf3cc504fb39559c705d6eb7dd523e87208e2a85d578eea5"
+    },
+    "upstream/commands/adk-build.md": {
+      "upstreamPath": "commands/adk-build.md",
+      "sha256": "4168c9afd8458992fcd28a488b66ca25c1db3472f5d2d074523f8ddfcf3a3270"
+    },
+    "upstream/commands/adk-debug.md": {
+      "upstreamPath": "commands/adk-debug.md",
+      "sha256": "af0141091de9479d6147f8bf96febbc0dcd4801ac4fc139bb2b93697f2b38fce"
+    },
+    "upstream/commands/adk-dev-console.md": {
+      "upstreamPath": "commands/adk-dev-console.md",
+      "sha256": "76bbf6e13814021df59af083fc6212e6e0fca494a3929708c8063d5d7a83bf90"
+    },
+    "upstream/commands/adk-document.md": {
+      "upstreamPath": "commands/adk-document.md",
+      "sha256": "099931067c9e39fd8158c4b57477bd530cb3e7b9a5799877dd3c0ae76eadf1a6"
+    },
+    "upstream/commands/adk-eval.md": {
+      "upstreamPath": "commands/adk-eval.md",
+      "sha256": "381cb0545323d140e6d355d9e5dbc899157cec6d0952929ab6f7d22c985a5128"
+    },
+    "upstream/commands/adk-explain.md": {
+      "upstreamPath": "commands/adk-explain.md",
+      "sha256": "bff08855bb93ae8df93c268d75ea087e2051c0d132101b28c493859cef740971"
+    },
+    "upstream/commands/adk-frontend.md": {
+      "upstreamPath": "commands/adk-frontend.md",
+      "sha256": "6e5b7a5f6d402a476fa7ccc90de8850c479d3d1f863934cb4d90e155680f580a"
+    },
+    "upstream/commands/adk-init.md": {
+      "upstreamPath": "commands/adk-init.md",
+      "sha256": "4559fce4507a0280bc46c18aa55e326d424a1cb5eb90aae421f002f11e59660e"
+    },
+    "upstream/commands/adk-integration.md": {
+      "upstreamPath": "commands/adk-integration.md",
+      "sha256": "b7c708c051b7a294f8a4f23c13f1978436a02d7518a69dd0b75e1e72145b1436"
+    },
+    "upstream/commands/adk-ship.md": {
+      "upstreamPath": "commands/adk-ship.md",
+      "sha256": "ea43e2989288aed17a81c819d52b908a129e33248b6edd6489e008d45d3730d4"
+    },
+    "upstream/commands/adk-test.md": {
+      "upstreamPath": "commands/adk-test.md",
+      "sha256": "8c9de0953b7c5852d1eb8236d15378d31e4d1733f28d368312c25fa30b645cff"
+    },
+    "upstream/commands/adk-validate.md": {
+      "upstreamPath": "commands/adk-validate.md",
+      "sha256": "45f42caf8596b75096157df9b14fcd59325561c07c607f496e1e5a26c20f6e14"
+    },
+    "upstream/commands/manifest.json": {
+      "upstreamPath": "commands/manifest.json",
+      "sha256": "d311c882db19d3f81d1779b78f3ca5955d520d63fad41fe32b617f9931fd00e2"
+    },
+    "upstream/plugin.json": {
+      "upstreamPath": ".claude-plugin/plugin.json",
+      "sha256": "08bfc36b7212285e7842ec7d37f6f3ab3315b08a746f1a84edd1603cf93950d6"
+    },
+    "upstream/skills.json": {
+      "upstreamPath": "skills.json",
+      "sha256": "1c3b30bd36b5000e60e121417bd0ddbb5a95077311ebc67c52ee81dfb34f5e84"
+    }
+  }
+}

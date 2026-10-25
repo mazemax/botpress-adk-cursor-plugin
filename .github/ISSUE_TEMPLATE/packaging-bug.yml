@@ -1,0 +1,71 @@
+{
+  "name": "Packaging or release defect",
+  "description": "Report manifest, reference, provenance, archive, or release problems",
+  "title": "[Wave 1]: ",
+  "labels": [],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Do not include tokens, private code, customer data, real workspace IDs, or sensitive transcripts. Security reports follow SECURITY.md."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "package-version-and-upstream-sha",
+      "attributes": {
+        "label": "Package version and upstream SHA",
+        "description": "Identify both distribution and upstream revisions"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "affected-files-or-workflow",
+      "attributes": {
+        "label": "Affected files or workflow",
+        "description": "Name the manifest, script, archive, or CI workflow"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "reproduction-and-validation-output",
+      "attributes": {
+        "label": "Reproduction and validation output",
+        "description": "Provide a minimal reproduction and sanitized error"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected-and-actual",
+      "attributes": {
+        "label": "Expected and actual result",
+        "description": "Describe what you expected, what happened, and any relevant logs after redaction."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "evidence-check",
+      "attributes": {
+        "label": "Evidence check",
+        "options": [
+          {
+            "label": "I searched existing issues and removed sensitive information.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}
