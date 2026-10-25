@@ -1,0 +1,93 @@
+{
+  "name": "Skill activation problem",
+  "description": "Report a missing, unexpected, or incorrect skill route",
+  "title": "[Wave 1]: ",
+  "labels": [],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Do not include tokens, private code, customer data, real workspace IDs, or sensitive transcripts. Security reports follow SECURITY.md."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "package-version",
+      "attributes": {
+        "label": "Package version",
+        "description": "For example, 1.0.0-rc.1"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "host-version-and-model",
+      "attributes": {
+        "label": "Host, version, and model",
+        "description": "Record the exact host surface/version and model"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "sanitized-prompt",
+      "attributes": {
+        "label": "Sanitized prompt",
+        "description": "Do not include private code, credentials, or customer data"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected-skill-or-behavior",
+      "attributes": {
+        "label": "Expected skill or behavior",
+        "description": "Which official skill should or should not activate?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "observed-skill-or-behavior",
+      "attributes": {
+        "label": "Observed skill or behavior",
+        "description": "What actually happened?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected-and-actual",
+      "attributes": {
+        "label": "Expected and actual result",
+        "description": "Describe what you expected, what happened, and any relevant logs after redaction."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "evidence-check",
+      "attributes": {
+        "label": "Evidence check",
+        "options": [
+          {
+            "label": "I searched existing issues and removed sensitive information.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

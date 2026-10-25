@@ -1,0 +1,82 @@
+{
+  "name": "Upstream content concern",
+  "description": "Route an ADK content defect without silently patching the distribution",
+  "title": "[Wave 1]: ",
+  "labels": [],
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Do not include tokens, private code, customer data, real workspace IDs, or sensitive transcripts. Security reports follow SECURITY.md."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "upstream-tag-and-commit",
+      "attributes": {
+        "label": "Upstream tag and commit",
+        "description": "Identify the exact botpress/skills revision"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "upstream-file-and-section",
+      "attributes": {
+        "label": "Upstream file and section",
+        "description": "Name the skill/command/reference and relevant section"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "evidence-and-impact",
+      "attributes": {
+        "label": "Evidence and impact",
+        "description": "Provide a sanitized reproduction and actual versus expected ADK behavior"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "upstream-report-link",
+      "attributes": {
+        "label": "Upstream report link",
+        "description": "Link the botpress/skills report if one exists, or write 'not yet reported'"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected-and-actual",
+      "attributes": {
+        "label": "Expected and actual result",
+        "description": "Describe what you expected, what happened, and any relevant logs after redaction."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "evidence-check",
+      "attributes": {
+        "label": "Evidence check",
+        "options": [
+          {
+            "label": "I searched existing issues and removed sensitive information.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

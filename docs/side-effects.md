@@ -1,0 +1,28 @@
+# Side-effect inventory
+
+**Basis:** Static review of `v2.0.7` at `79abe10503bf6dc70486737c94159322e108e496`, including all six `SKILL.md` files and all 12 command bodies, plus targeted reference inspection. No live ADK workflow was run for this inventory. CLI prompts and actual remote effects remain real-host verification items.
+
+The distribution does not patch these upstream instructions. This page makes their effects and review concerns visible.
+
+| Upstream workflow | Local effects | Command execution | External access or mutation | Confirmation and test boundary |
+|---|---|---|---|---|
+| `adk-init` | Scaffolds a project; linking/configuration can change project files. | Login, init, link, check. | Botpress authentication and optional workspace/bot linking. | Use a disposable directory. Review credentials and target workspace. No production deploy is part of init. |
+| `adk-build` | Creates or modifies primitives and sometimes `agent.config.ts`; dependencies may be requested. | Reads project context and always runs `adk check`. | Reads linked integration/model state when available; adding dependencies is a separate mutation. | Upstream requires a plan and approval for non-trivial work or config edits. Review every proposed file. |
+| `adk-validate` | Intended not to modify files or apply fixes. | Type check, `adk check`, integration list/status. | Can read linked integration/workspace status. | Treat as validation, not invocation. Actual generated-file effects still require host verification. |
+| `adk-test` | Can write/delete `.adk/scratch` runners; table tests insert and then delete a marked row. | Chat, run, traces, workflow/action/trigger invocation. | Runs against a live dev bot and can change dev state, tables, workflows, or external integration behavior. | Upstream asks before table inserts in shared/production workspaces. Always use disposable data and verify cleanup. |
+| `adk-debug` | Can implement a targeted fix and writes a regression eval under `evals/`. | Check, chat, logs, traces, evals. | Reproduces against a live dev bot and reads runtime evidence; eval execution can change dev state. | Review proposed fixes and test scope. Do not point unattended debugging at production. |
+| `adk-eval` | Creates or updates eval files when requested. | Runs evals against a live dev bot; reads traces. | Eval setup, events, tools, workflows, and assertions can mutate dev state or call integrations. | Use synthetic inputs and non-production workspaces. This is official ADK eval guidance, not a new Eval CI product. |
+| `adk-integration` | Changes generated dependency snapshots when dependencies change. | Integration/plugin list, search, info, add, remove, upgrade, status. | Discovers remote packages and can install, remove, configure, enable, disable, or promote dependencies in dev/prod. | Upstream explicitly requires confirmation for integration add/remove and pinned versions. Review every other external mutation, especially plugin and `--target prod` operations, before proceeding. |
+| `adk-frontend` | Reads or scaffolds frontend files; recommended setup can install dependencies. | Package-manager, type-generation, and ADK dev/build commands as applicable. | Uses Botpress API credentials and bot/workspace IDs; some upstream frontend guidance assumes a deployed bot. | Never log PATs. A frontend request is not permission to deploy the bot; test against disposable resources. |
+| `adk-document` | Create/update modes write project documentation; review/sync/search are read-oriented. | Glob, Grep, Read, and source verification. | May consult a local/official ADK source; no cloud mutation is inherent in the command. | Confirm the destination for new docs and preserve private project content. |
+| `adk-explain` | No intentional writes. | `adk status` plus file reads for project explanations. | Can read linked project metadata depending on CLI state. | Review output for hardcoded secrets or sensitive config before sharing it. |
+| `adk-dev-console` | The command is explanatory and read-oriented. | The skill documents `adk ps`, `dashboard`, `kill`, and Dev Console pages; these are not all run for a conceptual answer. | Local/cloud views can expose dev/prod conversations, traces, data, settings, and integration state. UI actions can mutate state. | Do not run `adk kill`, change prod targets, or mutate console data merely to answer a documentation question. |
+| `adk-ship` | Pre-flight reads state; a compatibility upgrade can patch the project after approval. | Check, evals, status, secret/dependency status, deploy, post-deploy status. | Reads production status and **deploys to production**, potentially syncing assets and changing dependencies. | Upstream requires an additional explicit confirmation immediately before every deploy. Never run this workflow in unattended tests or auto-approve prompts. |
+
+## Review concern: deploy guidance outside `adk-ship`
+
+The core `adk` skill also documents `adk deploy --yes` as auto-approving non-destructive deploy-plan changes. That does **not** make deployment read-only: it is still an externally visible production operation, and destructive storage changes may only block rather than make the operation safe. The more specific `adk-ship` command requires current-turn confirmation. This distribution preserves the upstream text, flags the overlap for upstream review, and prohibits all deployment in its own unattended tests.
+
+## Privacy and credential handling
+
+Logs, traces, configuration, frontend PATs, integration data, and table/KB content may be sensitive. Do not paste them into public issues or evidence. Routine repository validation uses no Botpress token and performs no ADK command execution.

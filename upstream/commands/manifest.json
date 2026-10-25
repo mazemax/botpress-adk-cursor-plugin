@@ -1,0 +1,64 @@
+{
+  "commands": [
+    {
+      "name": "adk-build",
+      "path": "adk-build.md",
+      "description": "Interview the user about a new ADK primitive or feature, then build it"
+    },
+    {
+      "name": "adk-debug",
+      "path": "adk-debug.md",
+      "description": "Debug ADK bot issues"
+    },
+    {
+      "name": "adk-dev-console",
+      "path": "adk-dev-console.md",
+      "description": "Explain ADK Dev Console features, tabs, and UI concepts"
+    },
+    {
+      "name": "adk-document",
+      "path": "adk-document.md",
+      "description": "Create, review, update, sync, or search project documentation for an ADK bot"
+    },
+    {
+      "name": "adk-eval",
+      "path": "adk-eval.md",
+      "description": "Write, run, or debug evals for an ADK bot"
+    },
+    {
+      "name": "adk-explain",
+      "path": "adk-explain.md",
+      "description": "Explain an ADK bot's architecture, flow, and components"
+    },
+    {
+      "name": "adk-frontend",
+      "path": "adk-frontend.md",
+      "description": "Build frontend apps that integrate with ADK bots"
+    },
+    {
+      "name": "adk-init",
+      "path": "adk-init.md",
+      "description": "Scaffold a new Botpress ADK project"
+    },
+    {
+      "name": "adk-integration",
+      "path": "adk-integration.md",
+      "description": "Discover, add, and configure Botpress integrations"
+    },
+    {
+      "name": "adk-ship",
+      "path": "adk-ship.md",
+      "description": "Run pre-flight checks and deploy an ADK bot to production"
+    },
+    {
+      "name": "adk-test",
+      "path": "adk-test.md",
+      "description": "Invoke an ADK primitive end-to-end with realistic input to confirm it works"
+    },
+    {
+      "name": "adk-validate",
+      "path": "adk-validate.md",
+      "description": "Validate an ADK primitive or a feature (a set of related primitives)"
+    }
+  ]
+}
