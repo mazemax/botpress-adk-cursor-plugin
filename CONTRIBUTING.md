@@ -34,10 +34,19 @@ Use `npm run sync:check` to inspect the public upstream branch. The scheduled wo
 - `npm run validate` — manifest, generated-command, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
 - `npm run check:references` — local Markdown and skill-reference reachability.
 - `npm run measure:context` — compare the reviewed context baseline.
+- `npm run check:behavior` — validate Stage 3 coverage, references, command cases, safety boundaries, compatibility states, and result metadata without invoking a model or host.
 - `npm test` — maintainer-tooling unit tests; no live Botpress workspace is used.
 - `npm run sync:verify` — compare local bytes with the immutable public upstream commit.
 
 Behavior evaluations are maintainer quality work, not a user-facing Eval CI product. See `docs/evaluation.md` and `tests/host-checklists/` before submitting host evidence.
+
+## Behavior case and result contributions
+
+- Preserve unique case IDs, fresh-conversation isolation, expected/forbidden skills, observable assertions, and existing repository-relative references.
+- Keep all five positive and three negative categories for every official skill; preserve command, comparison, and critical-safety coverage when editing related cases.
+- Do not weaken deployment prohibitions, claim Cursor CLI parity without evidence, or convert `adk-ship` into an executable smoke test. Tests must remain synthetic, disposable, non-production, and credential-free.
+- Use `tests/results/stage-3-result-template.json` only for real observed runs. An absent result is untested; never fill expected observations or compatibility evidence from documentation.
+- Include exact package/upstream revisions, host/version/surface, OS/architecture, model, timestamp, repetitions, observed outcomes, sanitized evidence, and limitations. Do not include private transcripts, customer data, or secrets.
 
 ## Security and support
 

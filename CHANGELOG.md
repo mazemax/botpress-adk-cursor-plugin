@@ -14,6 +14,8 @@ All notable distribution changes are recorded here. Upstream ADK changes are ide
 - Twelve generated Cursor commands under `commands/`, with explicit names/descriptions, exact inventory/content drift checks, and unit tests.
 - Host-specific local installation, workflow, troubleshooting, update, rollback, uninstall, and submission guidance with untested surfaces identified.
 - Command purposes, prerequisites, side effects, candidate `/adk-*` invocation guidance, and copyable natural-language alternatives.
+- Versioned Stage 3 activation, negative, overlap, command, comparison, and critical-safety inventories with deterministic structural validation.
+- Compatibility state matrix, sanitized real-host result template, and reproducible evaluation protocols; no live behavior result is implied.
 
 ### Not yet verified
 

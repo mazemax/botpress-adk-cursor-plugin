@@ -20,11 +20,12 @@
     "check:commands": "tsx scripts/generate-commands.ts --check",
     "check:references": "tsx scripts/check-references.ts",
     "measure:context": "tsx scripts/measure-context.ts",
+    "check:behavior": "tsx scripts/validate-behavior.ts",
     "sync:check": "tsx scripts/sync-upstream.ts --check",
     "sync:verify": "tsx scripts/sync-upstream.ts --verify",
     "sync:apply": "tsx scripts/sync-upstream.ts --apply",
     "test": "vitest run",
-    "check": "npm run typecheck && npm run check:commands && npm run validate && npm run check:references && npm run measure:context && npm test"
+    "check": "npm run typecheck && npm run check:commands && npm run validate && npm run check:references && npm run measure:context && npm run check:behavior && npm test"
   },
   "devDependencies": {
     "@types/node": "26.6.5",

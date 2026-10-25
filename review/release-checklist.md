@@ -10,6 +10,7 @@ Release candidate: `1.0.0-rc.1`. Do not mark an item complete without linked, ob
 - [ ] License, `NOTICE.md`, `UPSTREAM.json`, community status, and publisher metadata are correct.
 - [ ] Package inventory contains no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, rules, or unexpected host components.
 - [ ] `npm run check:commands` confirms exactly 12 generated Cursor commands with no missing, extra, or manually edited files.
+- [ ] `npm run check:behavior` validates all case inventories, deployment boundaries, compatibility states, and any actual result records.
 - [ ] Reference and context reports were reviewed; no unexplained growth remains.
 
 ## Host and behavior gates
@@ -17,9 +18,10 @@ Release candidate: `1.0.0-rc.1`. Do not mark an item complete without linked, ob
 - [ ] Clean Cursor installation and expected six-skill and 12-command discovery pass on the declared support matrix.
 - [ ] Every command's actual picker label and explicit invocation are recorded; natural-language fallbacks are evaluated separately.
 - [ ] The documented golden path passes with synthetic data and no production deployment.
-- [ ] Direct, indirect, negative, overlap, and safety cases meet published thresholds.
+- [ ] Direct, indirect, negative, overlap, comparison, and safety cases meet published thresholds at the release SHA.
+- [ ] Sanitized `*.result.json` evidence records exact environment metadata and observations; the unfilled template is not counted as a result.
 - [ ] Update, rollback, duplicate-install, and uninstall behavior pass with residue documented.
-- [ ] Compatibility results identify host/version, OS, model, package/upstream revisions, and untested configurations.
+- [ ] Compatibility results identify host/version, OS, model, package/upstream revisions, and untested configurations; Cursor CLI remains not claimed without separate evidence.
 
 ## Production and review gates
 
