@@ -9,7 +9,8 @@
 - [ ] Record install success/failure and exact version/source.
 - [ ] Verify all six expected skills are discoverable; record missing or duplicate components.
 - [ ] Verify only intended references load for a focused question.
-- [ ] Commands are Stage 2 scope and must be checked separately after conversion.
+- [ ] Verify all 12 generated commands appear in the `/` picker; record exact displayed labels and the actual successful `/adk-*` or other invocation form.
+- [ ] Invoke each command with a safe, observable assertion; test natural-language alternatives separately and never use `adk-ship` as a smoke test.
 
 ## Read-oriented activation
 

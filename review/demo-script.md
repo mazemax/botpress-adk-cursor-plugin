@@ -4,8 +4,8 @@
 
 1. Show the public repository, community attribution, upstream tag/commit, and compatibility status.
 2. Install `1.0.0-rc.1` using only `docs/quickstart.md` in a clean Cursor profile.
-3. Restart/reload and show the six expected skills in the host's discovery surface.
-4. Start a fresh conversation and inspect a small ADK project.
+3. Restart/reload and show the six expected skills and 12 generated commands in the host's discovery surfaces; capture the actual command-picker labels.
+4. Start a fresh conversation and explicitly invoke a read-oriented `adk-explain` command against a small disposable ADK project.
 5. Build one small primitive, reviewing the proposed files before any write.
 6. Run static validation and one synthetic dev-only test; show the observable result and trace evidence.
 7. Show a non-Botpress negative prompt and the expected no-ADK activation behavior.

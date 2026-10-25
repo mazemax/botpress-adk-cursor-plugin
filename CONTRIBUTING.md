@@ -29,7 +29,9 @@ Use `npm run sync:check` to inspect the public upstream branch. The scheduled wo
 
 ## Tests
 
-- `npm run validate` — manifest, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
+- `npm run generate:commands` — regenerate the 12 Cursor commands after a reviewed upstream command change; never edit generated files directly.
+- `npm run check:commands` — reject missing, extra, manually edited, or unsupported generated command content.
+- `npm run validate` — manifest, generated-command, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
 - `npm run check:references` — local Markdown and skill-reference reachability.
 - `npm run measure:context` — compare the reviewed context baseline.
 - `npm test` — maintainer-tooling unit tests; no live Botpress workspace is used.

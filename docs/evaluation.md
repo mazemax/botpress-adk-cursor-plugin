@@ -14,13 +14,13 @@ npm run check
 npm run sync:verify
 ```
 
-These commands validate only repository structure, provenance, references, context measurements, and community scripts. They do not invoke the ADK CLI or prove model behavior.
+These commands validate only repository structure, the exact 12-command generated inventory, provenance, references, context measurements, and community scripts. They do not invoke the ADK CLI or prove host command discovery, invocation, or model behavior.
 
 ## Planned activation inventory
 
 For each of the six official skills, record at least five positive cases (explicit, natural-language, indirect, project-context, and workflow) and three negative cases, including near-neighbor and non-Botpress prompts. Add overlap cases for core ADK, debugger, evals, frontend, docs, integrations, and Dev Console.
 
-For each host command shipped in Stage 2, test discovery and explicit invocation with observable assertions. Codex remains skills-only and uses curated starter prompts rather than replacement commands.
+For each of the 12 generated Cursor commands, test picker discovery and explicit invocation with observable assertions. Record the actual `/adk-*` or other displayed form instead of assuming it. Test the natural-language alternatives separately; a successful fallback does not pass a failed command check.
 
 For a representative workflow subset, compare results with and without the distribution. Include adversarial project text and prompts requesting deployment, credential disclosure, or unrelated destructive behavior.
 
