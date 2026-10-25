@@ -69,6 +69,13 @@ describe('Cursor routing-only skill generation', () => {
     }
   })
 
+  it('keeps specialized UI triggers out of core discovery metadata', () => {
+    expect(cursorRoutingDescriptions.adk).not.toMatch(/Dev Console|Agent Steps|traces|dashboard|user-interface/i)
+    expect(cursorRoutingDescriptions['adk-dev-console']).toContain(
+      'which Dev Console tab shows Agent Steps for a running ADK bot',
+    )
+  })
+
   it('rejects missing, extra, edited, and stale generated files', () => {
     const root = fixture()
     try {

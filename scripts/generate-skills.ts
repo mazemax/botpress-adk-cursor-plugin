@@ -14,7 +14,7 @@ export const CURSOR_SKILL_DIRECTORY = 'cursor/skills'
 // Distribution-owned discovery metadata only. Official instructions and references
 // remain in skills/ and are never edited by this generator.
 export const cursorRoutingDescriptions: Readonly<Record<string, string>> = {
-  adk: 'Implement and explain Botpress ADK project source code and configuration only: actions, tools, workflows, conversations, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai. Do not use this skill for Dev Console or other user-interface navigation, Agent Steps, traces, or dashboard questions.',
+  adk: 'Implement or explain Botpress ADK project source files and agent.config.ts: actions, tools, workflows, conversation handlers, tables, files, knowledge bases, triggers, assets, integrations, plugins, eval implementation, and Zai.',
   'adk-dev-console': 'Use when asked which Dev Console tab shows Agent Steps for a running ADK bot. Also use for ADK Dev Console pages, tabs, navigation, traces, multi-agent dashboard, agent switching, console modes, localhost:3001, and other console UI questions.',
 }
 

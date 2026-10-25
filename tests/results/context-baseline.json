@@ -6,13 +6,13 @@
   "skills": [
     {
       "name": "adk",
-      "discoveryCharacters": 346,
-      "discoveryUtf8Bytes": 346,
-      "estimatedDiscoveryTokens": 87,
-      "skillMarkdownBytes": 20793,
+      "discoveryCharacters": 232,
+      "discoveryUtf8Bytes": 232,
+      "estimatedDiscoveryTokens": 58,
+      "skillMarkdownBytes": 20679,
       "referenceFiles": 31,
       "referenceUtf8Bytes": 540843,
-      "totalUtf8Bytes": 561636
+      "totalUtf8Bytes": 561522
     },
     {
       "name": "adk-debugger",
@@ -67,12 +67,12 @@
   ],
   "totals": {
     "skills": 6,
-    "discoveryCharacters": 1280,
-    "discoveryUtf8Bytes": 1282,
-    "estimatedDiscoveryTokens": 323,
-    "skillMarkdownUtf8Bytes": 68890,
+    "discoveryCharacters": 1166,
+    "discoveryUtf8Bytes": 1168,
+    "estimatedDiscoveryTokens": 294,
+    "skillMarkdownUtf8Bytes": 68776,
     "referenceFiles": 56,
     "referenceUtf8Bytes": 824418,
-    "packageSkillUtf8Bytes": 893308
+    "packageSkillUtf8Bytes": 893194
   }
 }
